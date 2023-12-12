@@ -6,7 +6,8 @@ class Solution(object):
         :rtype: str
         """
         ans = [0]*len(s)
-        
-        for i in range(len(s)):
-            ans[indices[i]] = s[i]
+        for i, letter in zip(indices, s):
+            ans[i] = letter
+        #for i in range(len(s)):
+            #ans[indices[i]] = s[i]
         return "".join(ans)
