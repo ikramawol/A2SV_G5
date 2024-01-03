@@ -6,8 +6,6 @@ class Solution:
         l = 0
         r = len(s) - 1
         while l < r:
-            temp = s[l]
-            s[l] = s[r]
-            s[r] = temp
+            s[l], s[r] = s[r], s[l]
             l += 1
             r -= 1
