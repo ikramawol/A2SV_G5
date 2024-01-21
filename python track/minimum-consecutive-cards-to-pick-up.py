@@ -1,5 +1,8 @@
 class Solution:
     def minimumCardPickup(self, cards: List[int]) -> int:
+        # the approch is to count the number of existance of 
+        # a number in a list and if it exixtes twice we will
+        # compute its distance and take its minimum value
         
         duplicate = defaultdict(int)
 
@@ -16,10 +19,11 @@ class Solution:
                 duplicate[cards[l]] -= 1
                 l += 1
 
-        return ans if ans != float('inf') else -1
-
-
-
+        if ans != float('inf'):
+            return ans
+        else:
+            return -1
+        
         # duplicat = Counter(cards.copy())
         
         # for key, val in dict(duplicat).items():
